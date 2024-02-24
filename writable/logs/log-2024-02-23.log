@@ -1,0 +1,114 @@
+CRITICAL - 2024-02-23 10:58:35 --> ErrorException: Undefined variable $email
+in APPPATH\Controllers\Home.php on line 138.
+ 1 APPPATH\Controllers\Home.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'C:\\xampp\\htdocs\\CI\\app\\Controllers\\Home.php', 138)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 10:59:25 --> Error: Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Home.php on line 139.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 10:59:26 --> Error: Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Home.php on line 139.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 10:59:34 --> Error: Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Home.php on line 139.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 11:00:36 --> Error: Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Home.php on line 139.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 11:00:40 --> Error: Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Home.php on line 139.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 11:04:52 --> ErrorException: Undefined property: stdClass::$karan11
+in APPPATH\Controllers\Home.php on line 141.
+ 1 APPPATH\Controllers\Home.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$karan11', 'C:\\xampp\\htdocs\\CI\\app\\Controllers\\Home.php', 141)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 11:09:02 --> ErrorException: Undefined variable $name
+in APPPATH\Controllers\Home.php on line 149.
+ 1 APPPATH\Controllers\Home.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $name', 'C:\\xampp\\htdocs\\CI\\app\\Controllers\\Home.php', 149)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 13:17:21 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 588.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(588): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 SYSTEMPATH\HTTP\IncomingRequest.php(608): CodeIgniter\HTTP\IncomingRequest->getJSON(true)
+ 3 SYSTEMPATH\HTTP\IncomingRequest.php(556): CodeIgniter\HTTP\IncomingRequest->getJsonVar('name', false, null, null)
+ 4 APPPATH\Controllers\User.php(53): CodeIgniter\HTTP\IncomingRequest->getVar('name')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 13:17:44 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 588.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(588): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 SYSTEMPATH\HTTP\IncomingRequest.php(608): CodeIgniter\HTTP\IncomingRequest->getJSON(true)
+ 3 SYSTEMPATH\HTTP\IncomingRequest.php(556): CodeIgniter\HTTP\IncomingRequest->getJsonVar('name', false, null, null)
+ 4 APPPATH\Controllers\User.php(53): CodeIgniter\HTTP\IncomingRequest->getVar('name')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 17:17:19 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\User.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 17:17:26 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\User.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 17:18:28 --> ErrorException: Undefined property: stdClass::$email
+in APPPATH\Controllers\User.php on line 35.
+ 1 APPPATH\Controllers\User.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$email', 'C:\\xampp\\htdocs\\CI\\app\\Controllers\\User.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 17:21:25 --> InvalidArgumentException: key must be a string when using hmac
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJc3N1ZXIgb2YgdGhlIEpXVCIsImF1ZCI6IkF1ZGllbmNlIHRoYXQgdGhlIEpXVCIsInN1YiI6IlN1YmplY3Qgb2YgdGhlIEpXVCIsImlhdCI6MTcwODcwODg4NSwiZXhwIjoxNzA4NzEyNDg1LCJwaG9uZV9ubyI6IjIxNDc0ODM2NDcifQ', false, 'HS256')
+ 2 APPPATH\Controllers\User.php(40): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 17:25:53 --> InvalidArgumentException: key must be a string when using hmac
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJc3N1ZXIgb2YgdGhlIEpXVCIsImF1ZCI6IkF1ZGllbmNlIHRoYXQgdGhlIEpXVCIsInN1YiI6IlN1YmplY3Qgb2YgdGhlIEpXVCIsImlhdCI6MTcwODcwOTE1MywiZXhwIjoxNzA4NzEyNzUzLCJwaG9uZV9ubyI6IjIxNDc0ODM2NDcifQ', false, 'HS256')
+ 2 APPPATH\Controllers\User.php(40): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-23 17:29:42 --> InvalidArgumentException: key must be a string when using hmac
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJc3N1ZXIgb2YgdGhlIEpXVCIsImF1ZCI6IkF1ZGllbmNlIHRoYXQgdGhlIEpXVCIsInN1YiI6IlN1YmplY3Qgb2YgdGhlIEpXVCIsImlhdCI6MTcwODcwOTM4MiwiZXhwIjoxNzA4NzEyOTgyLCJwaG9uZV9ubyI6IjIxNDc0ODM2NDcifQ', false, 'HS256')
+ 2 APPPATH\Controllers\User.php(40): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
