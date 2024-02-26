@@ -202,3 +202,453 @@ in APPPATH\Controllers\User.php on line 77.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-24 10:49:26 --> mysqli_sql_exception: Column 'phone_no' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-24 10:49:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 10:49:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:49:26\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:49:26\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 10:49:26 --> [Caused by] mysqli_sql_exception: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:49:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:49:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:49:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-24 10:50:20 --> mysqli_sql_exception: Column 'phone_no' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-24 10:50:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 10:50:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:50:20\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:50:20\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 10:50:20 --> [Caused by] mysqli_sql_exception: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:50:20\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:50:20\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:50:20\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-24 10:51:17 --> mysqli_sql_exception: Column 'phone_no' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-24 10:51:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 10:51:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:51:17\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:51:17\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 10:51:17 --> [Caused by] mysqli_sql_exception: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:51:17\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:51:17\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:51:17\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-24 10:54:22 --> mysqli_sql_exception: Column 'phone_no' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-24 10:54:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 10:54:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:54:22\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:54:22\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 10:54:22 --> [Caused by] mysqli_sql_exception: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:54:22\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:54:22\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:54:22\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(160): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-24 10:57:07 --> mysqli_sql_exception: Column 'phone_no' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-24 10:57:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 10:57:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:57:07\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:57:07\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 10:57:07 --> [Caused by] mysqli_sql_exception: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:57:07\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:57:07\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 10:57:07\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-24 11:02:04 --> mysqli_sql_exception: Column 'phone_no' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-24 11:02:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 11:02:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 11:02:04\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 11:02:04\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 11:02:04 --> [Caused by] mysqli_sql_exception: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 11:02:04\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 11:02:04\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 11:02:04\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-24 11:02:20 --> mysqli_sql_exception: Column 'phone_no' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-24 11:02:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 11:02:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 11:02:20\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 11:02:20\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 11:02:20 --> [Caused by] mysqli_sql_exception: Column 'phone_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 11:02:20\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 11:02:20\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'24-02-24 11:02:20\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(161): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-24 12:01:05 --> mysqli_sql_exception: Column 'role' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-24 12:01:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 12:01:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', NULL, \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', NULL, \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:01:05\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', NULL, \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', NULL, \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:01:05\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 12:01:05 --> [Caused by] mysqli_sql_exception: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', NULL, \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', NULL, \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:01:05\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', NULL, \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', NULL, \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:01:05\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', NULL, \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', NULL, \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:01:05\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-24 12:07:38 --> mysqli_sql_exception: Column 'near_by' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-24 12:07:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'near_by' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 12:07:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'near_by' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', \'user\', \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', NULL, \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:07:38\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', \'user\', \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', NULL, \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:07:38\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 12:07:38 --> [Caused by] mysqli_sql_exception: Column 'near_by' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', \'user\', \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', NULL, \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:07:38\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', \'user\', \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', NULL, \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:07:38\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', \'user\', \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', NULL, \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:07:38\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-24 12:09:27 --> mysqli_sql_exception: Column 'accupation' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-24 12:09:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'accupation' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 12:09:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'accupation' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', \'user\', \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', \'ahilasha\', \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:09:27\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', \'user\', \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', \'ahilasha\', \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:09:27\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-24 12:09:27 --> [Caused by] mysqli_sql_exception: Column 'accupation' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', \'user\', \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', \'ahilasha\', \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:09:27\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', \'user\', \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', \'ahilasha\', \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:09:27\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (\'Karan Sharma\', \'6261941674\', \'user\', \'Ujjain\', \'Shri raam colony ankpat marg ujjain\', \'ahilasha\', \'asd\', \'24\', NULL, \'adf\', \'asdf\', \'adf\', \'ad\', \'asdf\', \'24-02-24 12:09:27\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shakha`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shakha:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(162): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

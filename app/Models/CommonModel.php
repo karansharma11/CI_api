@@ -44,4 +44,12 @@ class CommonModel extends Model // Extend the Model class
         $result = $builder->get()->getRow(); // Correct method name
         return $result;
     }
+
+    public function selectRows($table, $where = array())
+{
+    $builder = $this->db->table($table);
+    $builder->where($where);
+    $result = $builder->get()->getResult(); // Use getResult() instead of getRow()
+    return $result;
+}
 }

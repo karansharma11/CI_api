@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\models\CommonModel;
 use CodeIgniter\API\ResponseTrait;
 use \Firebase\JWT\JWT;
-use Cloudinary\Cloudinary;
+// use Cloudinary;
 
 class User extends BaseController
 {
@@ -40,29 +40,36 @@ class User extends BaseController
                 $token = JWT::encode($payload, $key, 'HS256');
          
                 $result = [
-                    'message' => 'Login Succesful',
+                    "status"=>200,
+                    'message' => 'Login Succesfull',
                     'token' => $token,
                     'data'=>$selectData
                 ];
+                return $this->respond($result, 200);
                 }else{
                     $result = [
-                        "status"=>404,
+                    "status"=>404,
                         "data"=>"Incorrect Password ",
                     ];
+                return $this->respond($result, 404);
+
                 }
              }else{
                 $result = [
                     "status"=>404,
                     "data"=>"User Not Found",
                 ];
+                return $this->respond($result, 404);
+
              }                
             }else{
                 $result = [
                     "status"=>404,
                     "data"=>"Method Not Found",
                 ];
+                return $this->respond($result, 404);
+
             }
-            return $this->respond($result);
           }
 
           public function uploadImage()
@@ -74,18 +81,14 @@ class User extends BaseController
         $apiSecret = getenv('CLOUDINARY_API_SECRET');
 
         // Initialize Cloudinary
-        Cloudinary::config([
-            'cloud_name' => $cloudName,
-            'api_key' => $apiKey,
-            'api_secret' => $apiSecret,
+    
+        \Cloudinary::config([
+            'cloud' => [
+                'cloud_name' => $cloudName,
+                'api_key' => $apiKey,
+                'api_secret' => $apiSecret,
+            ]
         ]);
-        // \Cloudinary::config([
-        //     'cloud' => [
-        //         'cloud_name' => $cloudName,
-        //         'api_key' => $apiKey,
-        //         'api_secret' => $apiSecret,
-        //     ]
-        // ]);
         $file = $this->request->getFile("file");
 
         // Check if file was uploaded successfully
@@ -123,26 +126,28 @@ class User extends BaseController
 
           public function create(){
             if($this->request->getMethod()=='post'){
-             $file = $this->request->getFile("file");
-            //  $name = $this->request->getVar("name");
-            //  $phone_no=$this->request->getVar("phone_no");
-            //  $role = $this->request->getVar("role");
-            //  $address = $this->request->getVar("address");
-            //  $city = $this->request->getVar("city");
-            //  $near_by=$this->request->getVar("near_by");
-            //  $nagar = $this->request->getVar("nagar");
-            //  $age = $this->request->getVar("age");
-            //  $accupation = $this->request->getVar("accupation");
-            //  $shaka_nagar=$this->request->getVar("shaka_nagar");
-            //  $basti = $this->request->getVar("basti");
-            //  $shakha=$this->request->getVar("shakha");
-            //  $vibhag=$this->request->getVar("vibhag");
-            //  $daitva=$this->request->getVar("daitva");
-            //  $date = date("y-m-d H:i:s");
+            
+            //  $file = $this->request->getFile("file");
+             $name = $this->request->getVar("name");
+             $phone_no=$this->request->getVar("phone_no");
+             $role = $this->request->getVar("role");
+             $address = $this->request->getVar("address");
+             $city = $this->request->getVar("city");
+             $near_by=$this->request->getVar("near_by");
+             $nagar = $this->request->getVar("nagar");
+             $age = $this->request->getVar("age");
+             $accupation = $this->request->getVar("accupation");
+             $shaka_nagar=$this->request->getVar("shaka_nagar");
+             $basti = $this->request->getVar("basti");
+             $shakha=$this->request->getVar("shakha");
+             $vibhag=$this->request->getVar("vibhag");
+             $daitva=$this->request->getVar("daitva");
+             $date = date("y-m-d H:i:s");
 
-            $imageResult = $this->uploadImage();
-             print_r($imageResult);
-             die();
+            // $imageResult = $this->uploadImage();
+            // print_r("Hello");
+            // echo $name;
+            // die();
 
              $data = [
              "name"=>$name,
@@ -164,23 +169,23 @@ class User extends BaseController
                $insert =$this->model->insertValue("users" , $data); 
                if($insert){
                 $result = [
-                    "status"=>201,
+                    "status"=>200,
                     "data"=>"Registration successfull",
                 ];
+                $this->respondCreated($result);
                }else{
                 $result = [
                     "status"=>404,
                     "data"=>"Some Error Occured",
                 ];
+                return $this->respond($result, 404);
                }
             }else{
                 $result = [
                     "status"=>404,
                     "data"=>"Record Not Found",
                 ];
+                return $this->respond($result, 404);
             }
-            return $this->respond($result);
           }
-
-
 }
