@@ -1,0 +1,423 @@
+CRITICAL - 2024-02-28 06:07:08 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\CommonModel.php on line 60.
+ 1 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 06:14:58 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\CommonModel.php on line 61.
+ 1 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 06:30:01 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\CommonModel.php on line 61.
+ 1 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 08:35:03 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\CommonModel.php on line 61.
+ 1 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-28 10:33:48 --> mysqli_sql_exception: Column 'role' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(211): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-28 10:33:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(211): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 10:33:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0c0cdf915_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:33:48\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0c0cdf915_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:33:48\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(211): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 10:33:49 --> [Caused by] mysqli_sql_exception: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0c0cdf915_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:33:48\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0c0cdf915_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:33:48\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0c0cdf915_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:33:48\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(211): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-28 10:46:50 --> mysqli_sql_exception: Column 'role' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-28 10:46:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 10:46:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0f1a824d3_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:46:50\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0f1a824d3_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:46:50\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 10:46:50 --> [Caused by] mysqli_sql_exception: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0f1a824d3_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:46:50\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0f1a824d3_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:46:50\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0f1a824d3_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:46:50\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-28 10:48:07 --> mysqli_sql_exception: Column 'role' cannot be null in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-28 10:48:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 10:48:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0f6788123_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:48:07\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0f6788123_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:48:07\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 10:48:07 --> [Caused by] mysqli_sql_exception: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0f6788123_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:48:07\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0f6788123_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:48:07\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'chturvedi\', \'6261941674\', NULL, \'http://localhost:8080/uploads/65df0f6788123_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'mahesh nagar\', \' 15 16 shri raam colony\', \'colony shaka\', \'shir raam colony\', \'daitva\', \'24-02-28 10:48:07\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 11:29:03 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\CommonModel.php on line 60.
+ 1 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:00:52 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::selectRows()
+in APPPATH\Models\CommonModel.php on line 62.
+ 1 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:01:30 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\CommonModel.php on line 62.
+ 1 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:02:06 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\CommonModel.php on line 62.
+ 1 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:03:59 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\CommonModel.php on line 60.
+ 1 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:13:32 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\CommonModel.php on line 60.
+ 1 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:15:02 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(662): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(864): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\CommonModel.php(72): CodeIgniter\Model->__call('select', [...])
+ 4 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:15:48 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\CommonModel.php on line 72.
+ 1 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-28 12:28:34 --> mysqli_sql_exception: Unknown column 'users.shaka_id' in 'on clause' in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `users`....', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CI\app\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(NULL)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\Home->getusers()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-28 12:28:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.shaka_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `shaka`.*, `basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka_id`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti_id`', [], false)
+ 2 APPPATH\Models\CommonModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:28:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.shaka_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `shaka`.*, `basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka_id`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `shaka`.*, `basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka_id`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `shaka`.*, `basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka_id`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti_id`', [], false)
+ 4 APPPATH\Models\CommonModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:28:34 --> [Caused by] mysqli_sql_exception: Unknown column 'users.shaka_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `users`.*, `shaka`.*, `basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka_id`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `shaka`.*, `basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka_id`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `shaka`.*, `basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka_id`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `shaka`.*, `basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka_id`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti_id`', [], false)
+ 5 APPPATH\Models\CommonModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-28 12:54:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN...' at line 1 in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `users`....', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CI\app\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(NULL)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\Home->getusers()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-28 12:54:33 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN...' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`id` as `user_id`, `users`.`name` as `user_name`, `users`.*, `shaka`.`id` as `shaka_id`, `shaka`.*, `basti`.`id` as `basti_id`, `basti`.`name` as `basti_name basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti`', [], false)
+ 2 APPPATH\Models\CommonModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:54:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`id` as `user_id`, `users`.`name` as `user_name`, `users`.*, `shaka`.`id` as `shaka_id`, `shaka`.*, `basti`.`id` as `basti_id`, `basti`.`name` as `basti_name basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`id` as `user_id`, `users`.`name` as `user_name`, `users`.*, `shaka`.`id` as `shaka_id`, `shaka`.*, `basti`.`id` as `basti_id`, `basti`.`name` as `basti_name basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`id` as `user_id`, `users`.`name` as `user_name`, `users`.*, `shaka`.`id` as `shaka_id`, `shaka`.*, `basti`.`id` as `basti_id`, `basti`.`name` as `basti_name basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti`', [], false)
+ 4 APPPATH\Models\CommonModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:54:33 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `users`.`id` as `user_id`, `users`.`name` as `user_name`, `users`.*, `shaka`.`id` as `shaka_id`, `shaka`.*, `basti`.`id` as `basti_id`, `basti`.`name` as `basti_name basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`id` as `user_id`, `users`.`name` as `user_name`, `users`.*, `shaka`.`id` as `shaka_id`, `shaka`.*, `basti`.`id` as `basti_id`, `basti`.`name` as `basti_name basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`id` as `user_id`, `users`.`name` as `user_name`, `users`.*, `shaka`.`id` as `shaka_id`, `shaka`.*, `basti`.`id` as `basti_id`, `basti`.`name` as `basti_name basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`id` as `user_id`, `users`.`name` as `user_name`, `users`.*, `shaka`.`id` as `shaka_id`, `shaka`.*, `basti`.`id` as `basti_id`, `basti`.`name` as `basti_name basti`.*
+FROM `users`
+LEFT JOIN `shaka` ON `shaka`.`id` = `users`.`shaka`
+LEFT JOIN `basti` ON `basti`.`id` = `users`.`basti`', [], false)
+ 5 APPPATH\Models\CommonModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(29): App\Models\CommonModel->getUsersWithDetails(null)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getusers()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-28 13:45:57 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci_rest_api_new`.`users`, CONSTRAINT `ShikshanF` FOREIGN KEY (`shikshan`) REFERENCES `shikshan` (`id`)) in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\CI\app\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\CI\app\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', Array)
+#6 C:\xampp\htdocs\CI\system\CodeIgniter.php(941): App\Controllers\User->create()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-02-28 13:45:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`ci_rest_api_new`.`users`, CONSTRAINT `ShikshanF` FOREIGN KEY (`shikshan`) REFERENCES `shikshan` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 2 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 13:45:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`ci_rest_api_new`.`users`, CONSTRAINT `ShikshanF` FOREIGN KEY (`shikshan`) REFERENCES `shikshan` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'atul\', \'6261941674\', \'role\', \'http://localhost:8080/uploads/65df391563171_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'2\', \'1\', \'1\', \'2\', \'1\', \'24-02-28 13:45:57\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'atul\', \'6261941674\', \'role\', \'http://localhost:8080/uploads/65df391563171_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'2\', \'1\', \'1\', \'2\', \'1\', \'24-02-28 13:45:57\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 4 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 13:45:57 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci_rest_api_new`.`users`, CONSTRAINT `ShikshanF` FOREIGN KEY (`shikshan`) REFERENCES `shikshan` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'atul\', \'6261941674\', \'role\', \'http://localhost:8080/uploads/65df391563171_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'2\', \'1\', \'1\', \'2\', \'1\', \'24-02-28 13:45:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'atul\', \'6261941674\', \'role\', \'http://localhost:8080/uploads/65df391563171_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'2\', \'1\', \'1\', \'2\', \'1\', \'24-02-28 13:45:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (\'atul\', \'6261941674\', \'role\', \'http://localhost:8080/uploads/65df391563171_img-4.jpg\', \'ujjain\', \'shri raam colony\', \'patel nagar\', \'mahesh nagar\', \'26\', \'naukri\', \'2\', \'1\', \'1\', \'2\', \'1\', \'24-02-28 13:45:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `phone_no`, `role`, `profile_photo`, `city`, `address`, `near_by`, `nagar`, `age`, `accupation`, `shaka_nagar`, `basti`, `shaka`, `vibhag`, `daitva`, `created_at`) VALUES (:name:, :phone_no:, :role:, :profile_photo:, :city:, :address:, :near_by:, :nagar:, :age:, :accupation:, :shaka_nagar:, :basti:, :shaka:, :vibhag:, :daitva:, :created_at:)', [...], false)
+ 5 APPPATH\Models\CommonModel.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(212): App\Models\CommonModel->insertValue('users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 19:14:25 --> Error: Call to undefined function App\Controllers\hash_password()
+in APPPATH\Controllers\User.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()

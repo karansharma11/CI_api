@@ -21,90 +21,84 @@ class Home extends BaseController
              return $this->respond($result , 200);
     
     }
-    public function getusers($id=null)
+    public function getusers($id = null)
     {
-    if($id==null){
-    $fetchRecord = $this->model->selectRecord("users");
-    $result = [
-   "status"=> 200,
-   "data"=>$fetchRecord,
-    ];
-    return $this->respond($result , 200);
-    }else{
-    $fetchRecord = $this->model->selectRow("users", ["id" => $id]);
-    if(!empty($fetchRecord)){
-        $result = [
-            "status"=> 200,
-            "data"=>$fetchRecord,
-             ];
-            return $this->respond($result , 200);
+        try {
+// print_r("hello");
+// // die();
+            $fetchRecord = $this->model->getUsersWithDetails($id);
+            return $this->respond($fetchRecord, $fetchRecord['status']);
 
-    }else{
-        $result = [
-            "status"=> 404,
-            "data"=>"Record Not Found",
-             ];
-            return $this->respond($result , 404);
-
-    }
-    }
+            // if ($id == null) {
+            //     $fetchRecord = $this->model->selectRecord("users");
+            //     $result = [
+            //         "status" => 200,
+            //         "data" => $fetchRecord,
+            //     ];
+            //     return $this->respond($result, 200);
+            // } else {
+            //     $fetchRecord = $this->model->selectRow("users", ["id" => $id]);
+            //     if (!empty($fetchRecord)) {
+            //         $result = [
+            //             "status" => 200,
+            //             "data" => $fetchRecord,
+            //         ];
+            //         return $this->respond($result, 200);
+            //     } else {
+            //         $result = [
+            //             "status" => 404,
+            //             "data" => "Record Not Found",
+            //         ];
+            //         return $this->respond($result, 404);
+            //     }
+            // }
+        } catch (\Exception $e) {
+            $result = [
+                "status" => 500,
+                "data" => "Internal Server Error: " . $e->getMessage(),
+            ];
+            return $this->respond($result, 500);
+        }
     }
 
 
 
     public function delete($id){
-    $selectData =  $this->model->selectRow("users" , ["id"=>$id]);     
-    if(!empty($selectData)){
-    $delete = $this->model->deleteValue("users" ,  ["id"=>$id]);
-    if($delete){
-    $result = [
-        "status"=>201,
-        "data"=>"Delete Successfully",
-    ];
-    }else{
-    $result = [
-        "status"=>404,
-        "data"=>"Some Error Found",
-    ];
+        try {
+            $selectData = $this->model->selectRow("users", ["id" => $id]);     
+            
+            if (!empty($selectData)) {
+                $delete = $this->model->deleteValue("users", ["id" => $id]);
+                if ($delete) {
+                    $result = [
+                        "status" => 201,
+                        "data" => "Delete Successfully",
+                    ];
+                    return $this->respond($result, 200);
+                } else {
+                    $result = [
+                        "status" => 404,
+                        "data" => "Some Error Found",
+                    ];
+                    return $this->respond($result, 404);
+                }
+            } else {
+                $result = [
+                    "status" => 404,
+                    "data" => "Record Not Found",
+                ];
+                return $this->respond($result, 404);
+            }
+        } catch (\Exception $e) {
+            $result = [
+                "status" => 500,
+                "data" => "Internal Server Error: " . $e->getMessage(),
+            ];
+            return $this->respond($result, 500);
+        }  
     }
-    }else{
-    $result = [
-        "status"=>404,
-        "data"=>"Record Not Found",
-    ];
-    }   
+    
 
-    return $this->respond($result);
-    }
-
-    public function role($id , $role){
-        $selectData =  $this->model->selectRow("users" , ["id"=>$id]);     
-        if(!empty($selectData)){
-       
-         $data = [
-            "role"=>$role
-         ];
-
-         $updateRole =  $this->model->updateValue("users" , ["id"=>$id] , $data);     
-        if($updateRole){
-         $result = [
-        "status"=>201,
-        "data"=>"Update data Successfully",
-         ];
-         }else{
-         $result = [
-        "status"=>404,
-        "data"=>"Some Error Found",
-         ];
-         }
-         }else{
-          $result = [
-              "status"=>404,
-              "data"=>"Record Not Found",
-          ];
-        }   
-         return $this->respond($result);
-          }
 
 
        

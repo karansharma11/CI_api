@@ -23,34 +23,121 @@ class Shaka_nagar extends BaseController
     }
 
     // get shaka_nagar 
-    public function getshaka_nagar($id=null)
+    public function getshaka_nagar($id = null)
     {
-    if($id==null){
-    $fetchRecord = $this->model->selectRecord("shaka_nagar");
-    $result = [
-   "status"=> 200,
-   "data"=>$fetchRecord,
-    ];
-    return $this->respond($result , 200);
-    }else{
-    $fetchRecord = $this->model->selectRow("shaka_nagar", ["id" => $id]);
-    if(!empty($fetchRecord)){
-        $result = [
-            "status"=> 200,
-            "data"=>$fetchRecord,
-             ];
-            return $this->respond($result , 200);
+        try {
+            if ($id == null) {
+                $fetchRecord = $this->model->selectRecord("shaka_nagar");
+                $result = [
+                    "status" => 200,
+                    "data" => $fetchRecord,
+                ];
+                return $this->respond($result, 200);
+            } else {
+                $fetchRecord = $this->model->selectRow("shaka_nagar", ["id" => $id]);
+                if (!empty($fetchRecord)) {
+                    $result = [
+                        "status" => 200,
+                        "data" => $fetchRecord,
+                    ];
+                    return $this->respond($result, 200);
+                } else {
+                    $result = [
+                        "status" => 404,
+                        "data" => "Record Not Found",
+                    ];
+                    return $this->respond($result, 404);
+                }
+            }
+        } catch (\Exception $e) {
+            $result = [
+                "status" => 500,
+                "data" => "Internal Server Error: " . $e->getMessage(),
+            ];
+            return $this->respond($result, 500);
+        }
+    }
 
-    }else{
-        $result = [
-            "status"=> 404,
-            "data"=>"Record Not Found",
-             ];
-            return $this->respond($result , 404);
+    // create shaka nagar
+    public function create(){
+        if($this->request->getMethod() == 'post'){
+            try {
+                $name = $this->request->getVar("name");
+                $date = date("y-m-d H:i:s");
+    
+                $data = [
+                    "name" => $name,
+                    "created_at" => $date,
+                ];
+    
+                $insert = $this->model->insertValue("shaka_nagar", $data); 
+    
+                if($insert){
+                    $result = [
+                        "status" => 200,
+                        "data" => "shaka_nagar Created successfully",
+                    ];
+                    return $this->respond($result, 200);
+                } else {
+                    $result = [
+                        "status" => 404,
+                        "data" => "Some Error Occurred",
+                    ];
+                    return $this->respond($result, 404);
+                }
+            } catch (\Exception $e) {
+                // Handle the exception
+                $result = [
+                    "status" => 500,
+                    "data" => "Internal Server Error: " . $e->getMessage(),
+                ];
+                return $this->respond($result, 500);
+            }
+        } else {
+            $result = [
+                "status" => 404,
+                "data" => "Method Not Found",
+            ];
+            return $this->respond($result, 404);
+        }
+    }
 
+    //   delete shaka_nagar 
+    public function delete($id){
+        try {
+            $selectData = $this->model->selectRow("shaka_nagar", ["id" => $id]);     
+            
+            if (!empty($selectData)) {
+                $delete = $this->model->deleteValue("shaka_nagar", ["id" => $id]);
+                if ($delete) {
+                    $result = [
+                        "status" => 201,
+                        "data" => "Delete Successfully",
+                    ];
+                    return $this->respond($result, 200);
+                } else {
+                    $result = [
+                        "status" => 404,
+                        "data" => "Some Error Found",
+                    ];
+                    return $this->respond($result, 404);
+                }
+            } else {
+                $result = [
+                    "status" => 404,
+                    "data" => "Record Not Found",
+                ];
+                return $this->respond($result, 404);
+            }
+        } catch (\Exception $e) {
+            $result = [
+                "status" => 500,
+                "data" => "Internal Server Error: " . $e->getMessage(),
+            ];
+            return $this->respond($result, 500);
+        }  
     }
-    }
-    }
+    
 
 
 

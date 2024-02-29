@@ -1,0 +1,10 @@
+CRITICAL - 2024-02-26 13:34:25 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 588.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(588): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 SYSTEMPATH\HTTP\IncomingRequest.php(608): CodeIgniter\HTTP\IncomingRequest->getJSON(true)
+ 3 SYSTEMPATH\HTTP\IncomingRequest.php(556): CodeIgniter\HTTP\IncomingRequest->getJsonVar('name', false, null, null)
+ 4 APPPATH\Controllers\Shaka_nagar.php(58): CodeIgniter\HTTP\IncomingRequest->getVar('name')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Shaka_nagar->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shaka_nagar))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
